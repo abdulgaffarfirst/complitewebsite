@@ -1,0 +1,308 @@
+/* পুরো পেজের ডিফল্ট মার্জিন এবং প্যাডিং রিসেট */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* মেনুবার এর স্টাইল */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar .nav-links li a:hover {
+    color: black;
+    background-color: green;
+    transition: transform 0.5s ease;
+}
+
+/* ডেট এবং টাইমের জন্য স্টাইল */
+.date-time {
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+/* স্লাইডারের বেসিক স্টাইল */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;  /* পুরো স্ক্রীনের প্রস্থ ব্যবহার করবে */
+    height: 100vh;  /* পুরো স্ক্রীনের উচ্চতা ব্যবহার করবে (view height) */
+    margin: 0 auto; /* স্লাইডারকে সেন্টার করে */
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;  /* ইমেজটি পুরো স্লাইডের উচ্চতা পূর্ণ করবে */
+    object-fit: cover;  /* ইমেজটি স্লাইডের সীমানা পূর্ণ করে ফিট করবে */
+}
+
+.slide p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+/* হিরো সেকশনের স্টাইল */
+section h1 {
+    text-align: center;
+    margin: 20px;
+    font-size: 36px;
+}
+
+section p {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    text-align: justify-content;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+/* টু কলাম সেকশনের স্টাইল */
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.columns .notice,
+.columns .calendar {
+    width: 48%;  /* দুইটি কলামের প্রস্থ */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.columns .notice {
+    color: black;
+    background-color: #f4f4f4;
+}
+
+.columns .calendar {
+    background-color: #f9f9f9;
+}
+
+/* নোটিসের তালিকার স্টাইল */
+.notice ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notice ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* ক্যালেন্ডারের আইফ্রেম স্টাইল */
+.calendar iframe {
+    border-radius: 8px;
+}
+
+
+/*eita chanage korlam*/
+
+/* Notice Section এর স্টাইল */
+.notice {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;  /* স্ক্রল না হওয়ার জন্য */
+    margin: 20px auto;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.notice ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    animation: slideUp 5s linear infinite;  /* অ্যানিমেশন ইনফিনিট হতে হবে */
+}
+
+.notice ul li {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+/* স্লাইড আপ অ্যানিমেশন */
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%); /* নিচ থেকে শুরু হবে */
+    }
+    50% {
+        transform: translateY(0);  /* উপরে এসে থামবে */
+    }
+    100% {
+        transform: translateY(-100%); /* উপরের দিকে স্লাইড করবে */
+    }
+}
+
+
+
+
+
+/* Section-এর ব্যাকগ্রাউন্ড কালার অলিভ করা হয়েছে */
+section {
+    background: #a9a979;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+/* Section-এর ব্যাকগ্রাউন্ড কালার অলিভ করা হয়েছে */
+section {
+    background: #a9a979;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+
+
+/* কার্ড কন্টেইনার */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+/* কার্ড স্টাইল */
+.card {
+    width: 300px;
+    height: 400px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* কার্ডের উপর মাউস হোভার করলে এর আকার বাড়বে */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* ইমেজ স্টাইল */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 25%;  /* গোলাকার ইমেজ */
+    transition: filter 0.3s ease;  /* ব্লার ট্রানজিশন */
+    filter: blur(0);  /* ইমেজ পরিষ্কার হবে */
+}
+
+/* মাউস হোভার করলে ইমেজ পরিষ্কার হবে */
+.card:hover img {
+    filter: blur(2px);  /* ব্লার ইফেক্ট */
+}
+
+/* কার্ডের কনটেন্ট স্টাইল */
+.card-content {
+    padding: 15px;
+}
+
+/* কার্ডের শিরোনাম */
+.card-content h3 {
+    font-size: 30px;  /* ফন্ট সাইজ ৩০px */
+    background-color: gray;
+    color: lime;  /* টেক্সট কালো */
+    margin: 10px 0;
+}
+
+/* কার্ডের বর্ণনা */
+.card-content p {
+    font-size: 18px; /* ফন্ট সাইজ ১৮px, আপনি প্রয়োজন অনুযায়ী বাড়াতে পারেন */
+    color: black;  /* টেক্সট কালো */
+    line-height: 1.6;
+}
+
+
+/* Footer-এর ব্যাকগ্রাউন্ড কালার কালো করা হয়েছে */
+/* ফুটার সেকশনের স্টাইল */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* সোশ্যাল লিঙ্ক কন্টেইনার */
+.social-links {
+    margin-top: 10px;
+}
+
+/* সোশ্যাল মিডিয়া আইকন */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+/* মাউস হোভার ইফেক্ট */
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* সোশ্যাল মিডিয়ার লিঙ্কের টেক্সট */
+footer p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
